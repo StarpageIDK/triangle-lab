@@ -1,0 +1,61 @@
+﻿<Window x:Class="lr5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lr5"
+        mc:Ignorable="d"
+        Title="Вычисление площади треугольника" Height="350" Width="525" Closing="Window_Closing"
+        Style="{DynamicResource windowStyle}">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Введите основание и высоту треугольника:" Margin="0,0,0,10" Style="{DynamicResource textBlock}"/>
+
+        <Grid Grid.ColumnSpan="2"  Grid.Row="1" Grid.Column="0" Margin="0,0,0,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Text="Основание:" VerticalAlignment="Center" Grid.ColumnSpan="2" Margin="0,0,420,0" Style="{DynamicResource textBlock}"/>
+            <TextBox Grid.Column="1" Name="BaseTextBox" Width="100" Margin="5"/>
+        </Grid>
+
+        <Grid Grid.ColumnSpan="2"  Grid.Row="2" Grid.Column="0" Margin="0,0,0,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Text="Высота:" VerticalAlignment="Center" Grid.ColumnSpan="2" Margin="0,0,443,0" Style="{DynamicResource textBlock}"/>
+            <TextBox Grid.Column="1" Name="HeightTextBox" Width="100" Margin="5"/>
+        </Grid>
+
+        <Button Grid.Column="0"  Grid.Row="3" Content="Посчитать площадь" Width="150" Margin="0,10,0,0" Click="CalculateArea_Click"/>
+        <Button Grid.Column="1"  Grid.Row="3" Content="Очистить историю" Width="150" Margin="0,10,0,0" Click="ClearListBox_Click"/>
+
+        <TextBlock Grid.ColumnSpan="2"  Grid.Row="4" Grid.Column="0" Name="ResultTextBlock" FontSize="16" Margin="0,10,0,0" Style="{DynamicResource textBlock}"/>
+
+        <ListBox Grid.ColumnSpan="2" Grid.Row="5" Name="ResultsListBox" Margin="0,10,0,0"  Style="{DynamicResource listBoxStyle}" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+
+        <Grid Grid.ColumnSpan="2"  Grid.Row="6" Grid.Column="0" HorizontalAlignment="Center" Margin="0,20,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <RadioButton Grid.Column="0" Name="LightThemeRadioButton" Checked="themes_Checked" Content="Белая тема" Margin="5" Style="{DynamicResource radioButtonStyle}"/>
+            <RadioButton Grid.Column="1" Name="DarkThemeRadioButton" Checked="themes_Checked" Content="Темная тема" Margin="5" Style="{DynamicResource radioButtonStyle}"/>
+        </Grid>
+    </Grid>
+</Window>

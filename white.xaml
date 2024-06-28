@@ -1,0 +1,28 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style x:Key="textBlock" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="Black"/>
+    </Style>
+    
+    <Style x:Key="labelStyle" TargetType="Label">
+        <Setter Property="Foreground" Value="Black"/>
+    </Style>
+
+    <Style x:Key="windowStyle" TargetType="Window">
+        <Setter Property="Background" Value="White"/>
+    </Style>
+
+    <Style x:Key="listBoxStyle" TargetType="ListBox">
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="Foreground" Value="Black" />
+    </Style>
+
+    <Style x:Key="borderStyle" TargetType="Border">
+        <Setter Property="BorderBrush" Value="Orange"/>
+    </Style>
+
+    <Style x:Key="radioButtonStyle" TargetType="RadioButton">
+        <Setter Property="Foreground" Value="Black"/>
+    </Style>
+</ResourceDictionary>

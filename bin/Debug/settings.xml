@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<settings>
+  <window_width>725</window_width>
+  <window_height>620</window_height>
+  <theme>dark</theme>
+  <BaseTextBox>11</BaseTextBox>
+  <HeightTextBox>2</HeightTextBox>
+  <RadioButton></RadioButton>
+  <ResultTextBox>Area of the triangle: 41</ResultTextBox>
+  <history>
+    <history_element>Base: 41, Height: 2 -&gt; Area: 41</history_element>
+  </history>
+</settings>
